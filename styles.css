@@ -1,0 +1,70 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Hero Section styles */
+#hero {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About Us Section styles */
+#about {
+  background-color: #fff;
+}
+
+/* Destinations Section styles */
+#destinations {
+  background-color: #f0f0f0;
+}
+
+/* Blog Section styles */
+#blog {
+  background-color: #fff;
+}
+
+/* Contact Us Section styles */
+#contact {
+  background-color: #f0f0f0;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+}
+
+.social-media-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+}
