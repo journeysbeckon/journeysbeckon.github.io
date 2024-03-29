@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1366747998924653"
-  crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1366747998924653" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Journeys Beckon</title>
-  <!-- Add your CSS stylesheets or link to external CSS files here -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <script src="script.js"></script>
 
   <style>
-    /* Add your CSS styles here */
+    /* Add any additional CSS styles here if needed */
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <!-- Your logo and navigation menu can go here -->
     <h1>Welcome to Journeys Beckon</h1>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero">
-    <!-- Background image and heading -->
     <h2>Let Your Journeys Begin Here</h2>
     <a href="#destinations" class="btn">Explore Destinations</a>
   </section>
 
-  <!-- About Us Section -->
   <section id="about">
     <h2>About Journeys Beckon</h2>
     <p>Wanderer at heart & storyteller by choice. Unveiling the world's secrets, journey by journey. Inspire & be inspired. #JourneysBeckon</p>
   </section>
 
-  <!-- Destinations Section -->
   <section id="destinations">
     <h2>Explore Our Featured Destinations</h2>
     <!-- Grid of destination cards -->
-    <div class="destination-card">
-      <!-- Destination image, name, and description -->
-    </div>
-    <div class="destination-card">
-      <!-- Destination image, name, and description -->
-    </div>
-    <!-- Repeat for more destination cards -->
+    <!-- Add destination cards here -->
   </section>
 
-  <!-- Blog Section -->
   <section id="blog">
     <h2>Latest From Our Blog</h2>
     <div id="blog-posts">
@@ -55,51 +41,19 @@
     </div>
   </section>
 
-  <!-- Google Form Section -->
   <section id="contact">
     <h2>Get in Touch</h2>
-    <!-- Embed Google Form using iframe -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwSJ4chtavtPkHovzIPZFmYKK1SVKeSCkH2WLGf-SR2CpvsQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  
-      <p>Email: journeysbeckon@gmail.com</p>
+    <p>Email: journeysbeckon@gmail.com</p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <!-- Social media icons -->
     <div class="social-media-icons">
-      <!-- Include links to your social media profiles -->
-      <a href="https://www.instagram.com/journeysbeckon/"><img src="https://www.instagram.com/favicon.ico" alt="Instagram"></a>
-      <a href="https://www.facebook.com/JourneysBeckon/"><img src="https://facebook.com/favicon.ico" alt="Facebook"></a>
-      <!-- Repeat for more social media icons -->
+      <a href="https://www.instagram.com/journeysbeckon/"><img src="instagram-icon.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/JourneysBeckon/"><img src="facebook-icon.png" alt="Facebook"></a>
     </div>
-    <!-- Copyright information -->
     <p>© 2024 Journeys Beckon. All Rights Reserved.</p>
   </footer>
-
-  <!-- Add your JavaScript code or link to external JS files here -->
-  <script>
-    // Fetch blogs from Blogger API and display them dynamically
-    window.onload = function() {
-      fetch('https://www.googleapis.com/blogger/v3/blogs/1855713977688632827/posts?key=AIzaSyCBhhCcYNPI-p9TPeYcpdc7Pf2eLEwlZSg')
-        .then(response => response.json())
-        .then(data => {
-          const blogPosts = data.items;
-          const blogSection = document.getElementById('blog-posts');
-          blogPosts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.classList.add('blog-post');
-            postElement.innerHTML = `
-              <h3>${post.title}</h3>
-              <p>${post.content}</p>
-              <a href="${post.url}" target="_blank">Read More</a>
-            `;
-            blogSection.appendChild(postElement);
-          });
-        })
-        .catch(error => console.error('Error fetching blogs:', error));
-    };
-  </script>
 
 </body>
 </html>
