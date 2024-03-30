@@ -4,83 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Journeys Beckon</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Add your CSS stylesheets or link to external CSS files here -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <h1>Welcome to Journeys Beckon</h1>
+  <header class="bg-dark text-light py-4">
+    <div class="container">
+      <h1>Welcome to Journeys Beckon</h1>
+    </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <h2>Let Your Journeys Begin Here</h2>
-    <a href="#destinations" class="btn">Explore Destinations</a>
+  <section id="hero" class="bg-light text-center py-5">
+    <div class="container">
+      <h2>Let Your Journeys Begin Here</h2>
+      <a href="#destinations" class="btn btn-primary">Explore Destinations</a>
+    </div>
   </section>
 
   <!-- Blog Section -->
-  <section id="blog">
-    <h2>Latest From Our Blog</h2>
-    <div id="blog-posts">
-      <!-- Blog posts will be fetched dynamically and inserted here -->
+  <section id="blog" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Latest From Our Blog</h2>
+      <div id="blog-posts" class="row">
+        <!-- Blog posts will be fetched dynamically and inserted here -->
+      </div>
     </div>
   </section>
 
   <!-- Instagram Section -->
-  <section id="instagram">
-    <h2>Instagram</h2>
-    <div id="instagram-feed">
-      <!-- Instagram posts will be fetched dynamically and inserted here -->
+  <section id="instagram" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Instagram</h2>
+      <div id="instagram-feed" class="row">
+        <!-- Instagram posts will be fetched dynamically and inserted here -->
+      </div>
     </div>
   </section>
 
   <!-- Facebook Section -->
-  <section id="facebook">
-    <h2>Facebook</h2>
-    <div id="facebook-feed">
-      <!-- Facebook posts will be fetched dynamically and inserted here -->
+  <section id="facebook" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Facebook</h2>
+      <div id="facebook-feed" class="row">
+        <!-- Facebook posts will be fetched dynamically and inserted here -->
+      </div>
     </div>
   </section>
 
   <!-- Twitter Section -->
-  <section id="twitter">
-    <h2>Twitter</h2>
-    <div id="twitter-feed">
-      <!-- Twitter posts will be fetched dynamically and inserted here -->
+  <section id="twitter" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Twitter</h2>
+      <div id="twitter-feed" class="row">
+        <!-- Twitter posts will be fetched dynamically and inserted here -->
+      </div>
     </div>
   </section>
 
   <!-- AdSense Ad -->
-  <section id="ads">
-    <h2>Ads</h2>
-    <div class="ad">
-      <!-- AdSense ad code goes here -->
-      <!-- Replace the following line with your AdSense ad code -->
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1366747998924653" crossorigin="anonymous"></script>
-      <!-- Replace this line with your AdSense ad unit code -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-1366747998924653"
-          data-ad-slot="YOUR_AD_SLOT_ID"
-          data-ad-format="auto"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+  <section id="ads" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Ads</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- AdSense ad code goes here -->
+          <!-- Replace the following line with your AdSense ad code -->
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1366747998924653" crossorigin="anonymous"></script>
+          <!-- Replace this line with your AdSense ad unit code -->
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-1366747998924653"
+              data-ad-slot="YOUR_AD_SLOT_ID"
+              data-ad-format="auto"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="social-media-icons">
-      <!-- Add links to your social media profiles -->
-      <a href="https://www.instagram.com/journeysbeckon/"><img src="instagram-icon.png" alt="Instagram"></a>
-      <a href="https://www.facebook.com/JourneysBeckon/"><img src="facebook-icon.png" alt="Facebook"></a>
-      <!-- Add more social media icons as needed -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <div class="social-media-icons">
+            <!-- Add links to your social media profiles -->
+            <a href="https://www.instagram.com/journeysbeckon/"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/JourneysBeckon/"><img src="facebook-icon.png" alt="Facebook"></a>
+            <!-- Add more social media icons as needed -->
+          </div>
+          <p>© 2024 Journeys Beckon. All Rights Reserved.</p>
+        </div>
+      </div>
     </div>
-    <p>© 2024 Journeys Beckon. All Rights Reserved.</p>
   </footer>
+
+  <!-- Add Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Add your JavaScript code or link to external JS files here -->
   <script src="script.js"></script>
