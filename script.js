@@ -25,21 +25,6 @@ window.onload = function() {
 
   // Fetch and display blogs
   fetchBlogPosts();
-
-  // Fetch and display Instagram posts
-  const instagramApiUrl = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=YOUR_INSTAGRAM_ACCESS_TOKEN';
-  fetchData(instagramApiUrl, 'instagram-feed', 'instagram');
-
-  // Fetch and display Facebook posts
-  const facebookApiUrl = 'https://graph.facebook.com/v12.0/me/feed?access_token=YOUR_FACEBOOK_ACCESS_TOKEN';
-  fetchData(facebookApiUrl, 'facebook-feed', 'facebook');
-
-  // Fetch and display Twitter posts
-  const twitterApiUrl = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=YOUR_SCREEN_NAME&count=10';
-  const twitterHeaders = {
-    Authorization: 'Bearer YOUR_TWITTER_ACCESS_TOKEN'
-  };
-  fetchData(twitterApiUrl, 'twitter-feed', 'twitter', twitterHeaders);
 };
 
 // Function to fetch and display blog posts
@@ -63,50 +48,4 @@ function fetchBlogPosts() {
       });
     })
     .catch(error => console.error('Error fetching blogs:', error));
-}
-
-// Function to append posts to the specified container
-function appendPosts(posts, containerId, platform) {
-  const container = document.getElementById(containerId);
-  posts.forEach(post => {
-    const postElement = document.createElement('div');
-    let content;
-    if (platform === 'instagram') {
-      content = `
-        <div class="col-md-4 mb-4">
-          <img src="${post.media_url}" alt="${post.caption}" class="img-fluid">
-          <p>${post.caption}</p>
-          <a href="${post.permalink}" target="_blank" class="btn btn-primary">View on Instagram</a>
-        </div>
-      `;
-    } else if (platform === 'facebook') {
-      content = `
-        <div class="col-md-4 mb-4">
-          <p>${post.message}</p>
-          <a href="${post.permalink_url}" target="_blank" class="btn btn-primary">View on Facebook</a>
-        </div>
-      `;
-    } else if (platform === 'twitter') {
-      content = `
-        <div class="col-md-4 mb-4">
-          <p>${post.text}</p>
-          <a href="https://twitter.com/${post.user.screen_name}/status/${post.id_str}" target="_blank" class="btn btn-primary">View on Twitter</a>
-        </div>
-      `;
-    }
-    postElement.innerHTML = content;
-    container.appendChild(postElement);
-  });
-}
-
-// Function to fetch data from the specified platform
-function fetchData(apiUrl, containerId, platform, headers = {}) {
-  fetch(apiUrl, {
-    headers: headers
-  })
-    .then(response => response.json())
-    .then(data => {
-      appendPosts(data.data, containerId, platform);
-    })
-    .catch(error => console.error(`Error fetching ${platform} data:`, error));
 }
