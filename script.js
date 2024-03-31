@@ -29,7 +29,7 @@ window.onload = function() {
 
 // Function to fetch and display blog posts
 function fetchBlogPosts() {
-  fetch('https://www.googleapis.com/blogger/v3/blogs/1855713977688632827/posts?key=YOUR_BLOGGER_API_KEY')
+  fetch('https://www.googleapis.com/blogger/v3/blogs/1855713977688632827/posts?key=AIzaSyCBhhCcYNPI-p9TPeYcpdc7Pf2eLEwlZSg')
     .then(response => response.json())
     .then(data => {
       const blogPosts = data.items;
