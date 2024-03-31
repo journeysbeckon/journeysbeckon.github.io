@@ -8,9 +8,11 @@ window.onload = function() {
       destinations.forEach(destination => {
         const card = document.createElement('div');
         card.classList.add('col-md-4', 'mb-4');
+        // Randomly select an image
+        const randomImageIndex = Math.floor(Math.random() * destination.images.length);
         card.innerHTML = `
           <div class="card">
-            <img src="${destination.image}" class="card-img-top" alt="${destination.name}">
+            <img src="${destination.images[randomImageIndex]}" class="card-img-top" alt="${destination.name}">
             <div class="card-body">
               <h5 class="card-title">${destination.name}</h5>
               <p class="card-text">${destination.description}</p>
