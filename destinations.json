@@ -4,31 +4,51 @@
       "name": "Taj Mahal",
       "location": "Agra, Uttar Pradesh",
       "description": "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1631 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.",
-      "image": "https://example.com/taj_mahal.jpg"
+      "images": [
+        "https://example.com/taj_mahal_1.jpg",
+        "https://example.com/taj_mahal_2.jpg",
+        "https://example.com/taj_mahal_3.jpg"
+      ]
     },
     {
       "name": "Jaipur",
       "location": "Rajasthan",
       "description": "Jaipur is the capital of India’s Rajasthan state. It evokes the royal family that once ruled the region and is now a bustling capital city. Jaipur is often called the 'Pink City' in reference to its distinctly colored buildings.",
-      "image": "https://example.com/jaipur.jpg"
+      "images": [
+        "https://example.com/taj_mahal_1.jpg",
+        "https://example.com/taj_mahal_2.jpg",
+        "https://example.com/taj_mahal_3.jpg"
+      ]
     },
     {
       "name": "Goa",
       "location": "Goa",
       "description": "Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area's tropical spice plantations.",
-      "image": "https://example.com/goa.jpg"
+      "images": [
+        "https://example.com/taj_mahal_1.jpg",
+        "https://example.com/taj_mahal_2.jpg",
+        "https://example.com/taj_mahal_3.jpg"
+      ]
     },
     {
       "name": "Kerala Backwaters",
       "location": "Kerala",
       "description": "The Kerala backwaters are a network of interconnected canals, rivers, lakes, and inlets, a labyrinthine system formed by more than 900 km of waterways, and sometimes compared to the American Bayou.",
-      "image": "https://example.com/kerala_backwaters.jpg"
+      "images": [
+        "https://example.com/taj_mahal_1.jpg",
+        "https://example.com/taj_mahal_2.jpg",
+        "https://example.com/taj_mahal_3.jpg"
+      ]
     },
     {
       "name": "Varanasi",
       "location": "Uttar Pradesh",
       "description": "Varanasi is a city in the northern Indian state of Uttar Pradesh dating to the 11th century B.C. Regarded as the spiritual capital of India, the city draws Hindu pilgrims who bathe in the Ganges River’s sacred waters and perform funeral rites.",
-      "image": "https://example.com/varanasi.jpg"
+      "images": [
+        "https://example.com/taj_mahal_1.jpg",
+        "https://example.com/taj_mahal_2.jpg",
+        "https://example.com/taj_mahal_3.jpg"
+      ]
     }
   ]
 }
