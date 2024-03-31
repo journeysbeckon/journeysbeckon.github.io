@@ -1,4 +1,29 @@
 window.onload = function() {
+
+  fetch('destinations.json')
+    .then(response => response.json())
+    .then(data => {
+      const destinations = data.destinations;
+      const destinationCards = document.getElementById('destination-cards');
+      destinations.forEach(destination => {
+        const card = document.createElement('div');
+        card.classList.add('col-md-4', 'mb-4');
+        card.innerHTML = `
+          <div class="card">
+            <img src="${destination.image}" class="card-img-top" alt="${destination.name}">
+            <div class="card-body">
+              <h5 class="card-title">${destination.name}</h5>
+              <p class="card-text">${destination.description}</p>
+              <p class="card-text"><small class="text-muted">${destination.location}</small></p>
+            </div>
+          </div>
+        `;
+        destinationCards.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Error fetching destinations:', error));
+  
+
   // Fetch blogs from Blogger API and display snippets dynamically
   fetch('https://www.googleapis.com/blogger/v3/blogs/1855713977688632827/posts?key=AIzaSyCBhhCcYNPI-p9TPeYcpdc7Pf2eLEwlZSg')
     .then(response => response.json())
