@@ -1,5 +1,5 @@
 window.onload = function() {
-
+  // Fetch destinations data
   fetch('destinations.json')
     .then(response => response.json())
     .then(data => {
@@ -22,10 +22,29 @@ window.onload = function() {
       });
     })
     .catch(error => console.error('Error fetching destinations:', error));
-  
 
-  // Fetch blogs from Blogger API and display snippets dynamically
-  fetch('https://www.googleapis.com/blogger/v3/blogs/1855713977688632827/posts?key=AIzaSyCBhhCcYNPI-p9TPeYcpdc7Pf2eLEwlZSg')
+  // Fetch and display blogs
+  fetchBlogPosts();
+
+  // Fetch and display Instagram posts
+  const instagramApiUrl = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=YOUR_INSTAGRAM_ACCESS_TOKEN';
+  fetchData(instagramApiUrl, 'instagram-feed', 'instagram');
+
+  // Fetch and display Facebook posts
+  const facebookApiUrl = 'https://graph.facebook.com/v12.0/me/feed?access_token=YOUR_FACEBOOK_ACCESS_TOKEN';
+  fetchData(facebookApiUrl, 'facebook-feed', 'facebook');
+
+  // Fetch and display Twitter posts
+  const twitterApiUrl = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=YOUR_SCREEN_NAME&count=10';
+  const twitterHeaders = {
+    Authorization: 'Bearer YOUR_TWITTER_ACCESS_TOKEN'
+  };
+  fetchData(twitterApiUrl, 'twitter-feed', 'twitter', twitterHeaders);
+};
+
+// Function to fetch and display blog posts
+function fetchBlogPosts() {
+  fetch('https://www.googleapis.com/blogger/v3/blogs/1855713977688632827/posts?key=YOUR_BLOGGER_API_KEY')
     .then(response => response.json())
     .then(data => {
       const blogPosts = data.items;
@@ -44,22 +63,7 @@ window.onload = function() {
       });
     })
     .catch(error => console.error('Error fetching blogs:', error));
-
-  // Fetch and display Instagram posts
-  const instagramApiUrl = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=YOUR_ACCESS_TOKEN';
-  fetchData(instagramApiUrl, 'instagram-feed', 'instagram');
-
-  // Fetch and display Facebook posts
-  const facebookApiUrl = 'https://graph.facebook.com/v12.0/me/feed?access_token=YOUR_ACCESS_TOKEN';
-  fetchData(facebookApiUrl, 'facebook-feed', 'facebook');
-
-  // Fetch and display Twitter posts
-  const twitterApiUrl = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=YOUR_SCREEN_NAME&count=10';
-  const twitterHeaders = {
-    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
-  };
-  fetchData(twitterApiUrl, 'twitter-feed', 'twitter', twitterHeaders);
-};
+}
 
 // Function to append posts to the specified container
 function appendPosts(posts, containerId, platform) {
