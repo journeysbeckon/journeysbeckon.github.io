@@ -4,6 +4,9 @@
       "name": "India",
       "description": "India is a country in South Asia. It is the seventh-largest country by land area, and the second-most populous country, with over 1.3 billion people.",
       "image": "https://example.com/india.jpg",
+      "population": "1.3 billion",
+      "currency": "Indian Rupee (INR)",
+      "language": "Hindi, English",
       "states": [
         {
           "name": "Uttar Pradesh",
@@ -87,6 +90,9 @@
       "name": "United States",
       "description": "The United States of America (USA), commonly known as the United States (U.S. or US), or America, is a country primarily located in North America, consisting of 50 states, a federal district, five major self-governing territories, and various possessions.",
       "image": "https://example.com/usa.jpg",
+      "population": "1.3 billion",
+      "currency": "USD",
+      "language": "English",
       "states": [
         {
           "name": "California",
